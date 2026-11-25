@@ -1,0 +1,30 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+    int a, b;
+    const float EPSILON = 0.000001f;
+
+    cout << "Enter two integer numbers (e.g. 1 1 or 1011 1112): ";
+    cin >> a >> b;
+
+    if (a == 0 || b == 0) {
+        cout << "Error: Division by zero is not allowed." << endl;
+        system("pause");
+        return 1;
+    }
+
+    float res1 = 1.0f / static_cast<float>(a);
+    float res2 = 1.0f / static_cast<float>(b);
+
+    if (fabs(res1 - res2) < EPSILON) {
+        cout << "Results are equal (by 0.000001 epsilon)" << endl;
+    } else {
+        cout << "Results are not equal (by 0.000001 epsilon)" << endl;
+    }
+
+    system("pause");
+    return 0;
+}
