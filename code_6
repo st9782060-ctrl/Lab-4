@@ -2,11 +2,11 @@
 
 using namespace std;
 
-int main(void) {
+int main() {
     bool answer;
     int value;
 
-    cout << "Enter a value: ";
+    cout << "Enter an integer value (e.g. 0, 4, 10, 22, 111): ";
     cin >> value;
 
     answer = (value >= 0 && value < 10) ||
@@ -15,5 +15,7 @@ int main(void) {
              (value == 111);
 
     cout << (answer ? "THAT'S TRUE :)" : "THAT'S NOT TRUE :(") << endl;
+
+    system("pause");
     return 0;
 }
